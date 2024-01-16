@@ -1,0 +1,53 @@
+body.dark-mode{
+  background-color: #28292c;
+}
+*{
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+.navbar-nav{
+  flex-direction: row !important;
+  gap: 20px !important;
+  font-size: 22px !important;
+  padding: 8px 0;
+}
+.nav-link{
+  color : #000 !important;
+  background-color: grey;
+  padding: 8px 18px !important;
+  font-size: 24px !important;
+  border-radius: 30px !important;
+  color : #fff !important;
+  
+}
+
+.navbar-brand{
+  font-size : 28px !important;
+  font-weight: 700;
+}
+
+.Tab-container{
+  align-items: baseline !important;
+}
+
+.Tab-container a{
+  padding : 0 !important;
+  display: block;
+  margin-right: 20px !important;
+  font-size: 22px !important;
+  position: relative !important;
+  text-decoration: none !important;
+  color : #000;
+  transition: .3s ease-in-out;
+}
+a.active::after{
+  position: absolute !important;
+  content : "";
+  width: 100%;
+  height: 3px;
+  left : 0;
+  top : 45px !important;
+  bottom: 0;
+  background-color: red;
+  transition: .3s ease-in-out;
+}

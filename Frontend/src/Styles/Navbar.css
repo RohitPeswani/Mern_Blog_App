@@ -1,0 +1,90 @@
+:root {
+  --light: #d8dbe0;
+  --dark: #28292c;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  margin-right: 65px !important;
+}
+.darkModeLabel {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background-color: var(--dark);
+  border-radius: 50px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.darkModeInput {
+  position: absolute;
+  display: none;
+}
+
+.darkModeLabel::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  left: 0;
+  border-radius: 50px;
+  background-color: white;
+  transition: 0.3s;
+  
+}
+.darkModeInput:checked + .darkModeLabel{
+  background-color: #bada55 !important;
+}
+
+.darkModeInput:checked ~ .darkModeLabel::before {
+  background-color: #fff;
+  left: 49.5%;
+  box-shadow: none;
+}
+/*.slider::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: inset 14px -2px 0px 0px var(--light);
+  background-color: var(--dark);
+  transition: 0.3s;
+}*/
+
+@media screen and (max-width : 360px){
+  .navbar{
+    padding : 0.1rem 0.5rem !important;
+    display: flex !important;
+   
+  }
+  .navbar-brand{
+    font-size: 15px !important;
+  }
+  
+  .Tab-container{
+    display: flex !important;
+  /*  margin: 0 !important;*/
+  }
+  
+  .Tab-container a{
+    font-size: 10px !important;
+    margin-right : 10px !important;
+  }
+  .Tab-container a.active::after{
+    top: 20px !important;
+    height: 2px !important;
+  }
+  .navbar-nav{
+    padding : 8px !important;
+    gap : 4px !important;
+  }
+  .navbar-nav .nav-link{
+    font-size: 10px !important;
+    padding: 5px 10px!important;
+  }
+}
