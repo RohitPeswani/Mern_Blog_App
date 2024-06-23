@@ -12,7 +12,7 @@ const AddBlog = () => {
   })
   
   const sendRequest = async () => {
-  const res = await axios.post("http://localhost:5000/blog/add",{
+  const res = await axios.post("https://mern-blog-app-backend-1.onrender.com/blog/add",{
     title : inputs.title,
     description : inputs.description,
     imageUrl : inputs.imageUrl,

@@ -9,7 +9,7 @@ const BlogDetail = () => {
   const id = useParams().id;
   const [inputs, setInputs] = useState({});
   const sendRequest = async () => {
-    const res = await axios.get(`http://localhost:5000/blog/${id}`).catch((err) => console.log(err))
+    const res = await axios.get(`https://mern-blog-app-backend-1.onrender.com/blog/${id}`).catch((err) => console.log(err))
     const data = await res.data;
     
     return data
@@ -35,7 +35,7 @@ const BlogDetail = () => {
     })
   }
 const updateRequest = async () => {
-    const res = await axios.put(`http://localhost:5000/blog/update/${id}`, {
+    const res = await axios.put(`https://mern-blog-app-backend-1.onrender.com/blog/update/${id}`, {
       title : inputs.title,
       description : inputs.description,
       imageUrl : inputs.imageUrl

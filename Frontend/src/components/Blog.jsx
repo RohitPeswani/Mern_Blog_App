@@ -19,13 +19,13 @@ const Blog = (props) => {
   const handleLikeRequest = async (id) =>{
     
     if(inputElem.current.checked){
-      const res = await axios.put(`http://localhost:5000/blog/unlike/${id}`,{
+      const res = await axios.put(`https://mern-blog-app-backend-1.onrender.com/blog/unlike/${id}`,{
         userId : localStorage.getItem('userId')
       })
       const data = await res.data;
       return data;
     }else{
-      const res = await axios.put(`http://localhost:5000/blog/like/${id}`,{
+      const res = await axios.put(`https://mern-blog-app-backend-1.onrender.com/blog/like/${id}`,{
         userId : localStorage.getItem('userId')
       })
       const data = await res.data;
@@ -49,7 +49,7 @@ const Blog = (props) => {
   }, [inputElem.current.checked])*/
   
   const deleteRequest = async(id) => {
-    const res = await axios.delete(`http://localhost:5000/blog/delete/${id}`).catch((err) => console.log(err))
+    const res = await axios.delete(`https://mern-blog-app-backend-1.onrender.com/blog/delete/${id}`).catch((err) => console.log(err))
     const data = await res.data;
     return data;
   }

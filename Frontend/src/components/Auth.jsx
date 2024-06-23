@@ -26,7 +26,7 @@ export const Auth = () => {
   }
   const sendData = async (type="login") => {
     
-    const res = await axios.post(`http://localhost:5000/user/${type}` ,{
+    const res = await axios.post(`https://mern-blog-app-backend-1.onrender.com/user/${type}` ,{
       name : inputs.name,
       email : inputs.email,
       password : inputs.password
